@@ -40,10 +40,11 @@ class _DefaultPickerViewState extends State<DefaultPickerView> {
 
     countryPicker = const FlCountryCodePicker(
       countryTextStyle: TextStyle(
-        color: Colors.red,
+        color: Colors.green,
         fontSize: 16,
       ),
       dialCodeTextStyle: TextStyle(color: Colors.green, fontSize: 16),
+      showFlag: false,
     );
   }
 

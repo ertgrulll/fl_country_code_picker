@@ -213,6 +213,7 @@ class FlCountryCodePicker {
       isScrollControlled: true,
       builder: (_) => CountryCodePickerModal(
         title: title,
+        showFlag: showFlag,
         defaultAppbarBackgroundColor: defaultAppbarBackgroundColor,
         defaultAppbarForegroundColor: defaultAppbarForegroundColor,
         defaultAppbarCloseIconBackgroundColor:
