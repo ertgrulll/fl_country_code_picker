@@ -21,6 +21,7 @@ class FlCountryCodePicker {
     this.defaultAppbarText = 'Select Country Code',
     this.defaultAppbarCloseIcon = Icons.clear_rounded,
     this.localize = true,
+    this.showFlag = true,
     this.horizontalTitleGap,
     this.searchBarDecoration,
     this.showDialCode = true,
@@ -32,6 +33,9 @@ class FlCountryCodePicker {
     this.dialCodeTextStyle,
     this.searchBarTextStyle,
   });
+
+  /// If true, shows the flag of the country.
+  final bool showFlag;
 
   /// {@template favorites_icon}
   /// Custom icon of favorite countries.

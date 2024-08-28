@@ -18,6 +18,7 @@ class CountryCodePickerModal extends StatefulWidget {
     required this.favoritesIcon,
     required this.showSearchBar,
     required this.showDialCode,
+    this.showFlag = true,
     this.title,
     this.defaultAppbarBackgroundColor = Colors.white,
     this.defaultAppbarForegroundColor = Colors.black,
@@ -89,6 +90,9 @@ class CountryCodePickerModal extends StatefulWidget {
 
   /// space between flag and country name
   final double? horizontalTitleGap;
+
+  /// If true, shows the flag of the country.
+  final bool showFlag;
 
   @override
   State<CountryCodePickerModal> createState() => _CountryCodePickerModalState();
@@ -259,7 +263,8 @@ class _CountryCodePickerModalState extends State<CountryCodePickerModal> {
                 final textTheme = Theme.of(context).textTheme;
                 return ListTile(
                   onTap: () => Navigator.pop(context, code),
-                  leading: CircleFlag(code.code, size: 40),
+                  leading:
+                      widget.showFlag ? CircleFlag(code.code, size: 40) : null,
                   horizontalTitleGap: widget.horizontalTitleGap,
                   title: Text(
                     name,
